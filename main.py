@@ -1,4 +1,4 @@
-#ceci est notre code principal
+# -- ceci est notre code principal --
 
 #commandes d'initialisation
 from sense_hat import SenseHat
