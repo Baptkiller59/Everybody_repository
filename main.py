@@ -5,3 +5,11 @@ from sense_hat import SenseHat
 from time import sleep
 
 sense = SenseHat()
+
+#tps
+
+#GPS
+
+#photo + heure
+
+#backup data
