@@ -12,4 +12,6 @@ sense = SenseHat()
 
 #photo + heure
 
+#caméra infrarouge
+
 #backup data
