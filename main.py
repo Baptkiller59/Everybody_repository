@@ -10,29 +10,35 @@ import time
 import math
 
 sense = SenseHat()
+tps = #tps
 
-#tps
+#afficher un logo pendant le démarage
 
-#GPS - à tester (v1)
-Name  = "ISS (ZARYA)" 
-Line1 = "1 25544U 98067A   18008.29516252  .00001521  00000-0  30072-4 0  9994" 
-Line2 = "2 25544  51.6425  95.8146 0003157 351.7539  71.6709 15.54270870 93659" 
+#liste des méthodes
+def position() #GPS - à tester (v1)
+  Name  = "ISS (ZARYA)" 
+  Line1 = "1 25544U 98067A   18008.29516252  .00001521  00000-0  30072-4 0  9994" 
+  Line2 = "2 25544  51.6425  95.8146 0003157 351.7539  71.6709 15.54270870 93659" 
 
-Iss = ephem.readtle(name, line1, line2) 
+  Iss = ephem.readtle(name, line1, line2) 
 
-While True: 
-  Iss.computer() 
-  Print("Lat: %s – Long: %s" % (iss.sublat, iss.sublong)) 
-  Time.sleep(1) 
+  While True: #eviter une boucle infini
+    Iss.computer() 
+    Print("Lat: %s – Long: %s" % (iss.sublat, iss.sublong)) 
+    Time.sleep(1) 
+
+def photo() #photo + heure - à tester v1  
+  camera = PiCamera()
+  camera.start_preview() #il manque la prise de date
+  sleep(60)
+  camera.stop_preview()
+
+def infrarouge() #caméra infrarouge
 
 
-#photo + heure - à tester v1  
-camera = PiCamera()
-camera.start_preview() #il manque la prise de date
-sleep(60)
-camera.stop_preview()
-
-
-#caméra infrarouge
-
-#backup data
+while tps <= : #condition à trouver -> s'execute pendant 3heure
+  position()
+  photo()
+  infrarouge()  
+  
+  
