@@ -38,7 +38,7 @@ def infrarouge() #photo + heure - à tester v1
   sleep(60)
   camera.stop_preview()
 
-
+time()
 while tps <= 118800: #condition à trouver -> s'execute pendant 3heures (118 800 secondes)
   time()
   position()
