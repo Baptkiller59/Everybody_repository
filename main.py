@@ -9,6 +9,36 @@ import ephem
 import time
 import math
 
+##variable
+##maincolors
+
+y = [255, 255, 0]  
+g = [0, 255, 0]
+b = [0,150, 255]   
+a = [0, 0, 255]
+v = [165, 0, 245]
+r = [250, 0, 0]
+o = [255, 130, 0] 
+
+#colors supp
+
+p = [215, 0, 230]
+w = [255, 255, 255]
+e = [0, 0, 0] 
+
+camerainfra = [  
+e, e, e, e, y, y, e, e,
+e, e, e, e, e, y, e, e,  
+y, y, y, y, y, y, y, y,  
+y, e, e, r, r, e, y, y,   
+y, e, r, e, e, r, e, y,  
+y, e, r, e, e, r, e, y,  
+y, e, e, r, r, e, e, y,   
+y, y, y, y, y, y, y, y,  
+]
+
+sense.set_pixels(camerainfra)  
+
 sense = SenseHat()
 debut = time.time() # On attend quelques secondes avant de taper la commande suivante
 
