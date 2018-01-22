@@ -9,8 +9,10 @@ import ephem
 import time
 import math
 
-##variable
-##maincolors
+sense = SenseHat()
+debut = time.time()
+
+##definition des couleurs
 
 y = [255, 255, 0]  
 g = [0, 255, 0]
@@ -19,14 +21,11 @@ a = [0, 0, 255]
 v = [165, 0, 245]
 r = [250, 0, 0]
 o = [255, 130, 0] 
-
-#colors supp
-
 p = [215, 0, 230]
 w = [255, 255, 255]
 e = [0, 0, 0] 
 
-camerainfra = [  
+imgcamerainfra = [  
 e, e, e, e, y, y, e, e,
 e, e, e, e, e, y, e, e,  
 y, y, y, y, y, y, y, y,  
@@ -37,10 +36,6 @@ y, e, e, r, r, e, e, y,
 y, y, y, y, y, y, y, y,  
 ]
 
-sense.set_pixels(camerainfra)  
-
-sense = SenseHat()
-debut = time.time() # On attend quelques secondes avant de taper la commande suivante
 
 #afficher un logo pendant le démarage
 
@@ -72,6 +67,7 @@ temps()
 
 while tps <= 10800: #condition à vérifier -> s'execute pendant 3heures (10 800 secondes)
   if lum > #test de la luminosité
+    sense.set_pixels(imgcamerainfra)  
     infrarouge()
     position()
   temps()
