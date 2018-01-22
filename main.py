@@ -41,6 +41,7 @@ def infrarouge() #photo + heure - à tester v1 + manque la sauvergarde
 temps()
 
 while tps <= 10800: #condition à vérifier -> s'execute pendant 3heures (10 800 secondes)
-  position()
-  infrarouge()
+  if lum > #test de la luminosité
+    infrarouge()
+    position()
   temps()
